@@ -53,11 +53,6 @@ class Ldse:
     def getQuant(self):
         return self.quant
     
-    def somaValores(self, valor):
-       soma = 0;
-       for i in range(self.quant):
-           soma += self.quant[i] 
-       return soma
 
     def removerFim(self):
         if self.quant == 1:
@@ -77,12 +72,6 @@ class Ldse:
     def getLastElement(self):
         if not self.estahVazia():
             return self.ult.info
-        
-    def consultarElemento(self, valor):
-        consultarE = self.prim
-        while consultarE and consultarE.info != valor:
-            consultarE = consultarE.prox
-        return consultarE
     
     def removerElemento(self,valor):
         if self.quant == 1:
@@ -107,9 +96,21 @@ class Ldse:
         if self.quant == 1:
             if self.prim.info == valor:
                 self.prim = self.ult = None
+                self.quant -= 1
         else:
-            while self.prim.info != None and self.prim.info != valor:
+            aux = ant = self.prim
+            while aux.prox != None or aux.prox == None: 
+              ant = aux
+              aux = aux.prox
+              if aux.info == valor:
+                  ant.prox = aux.prox
+                  if aux == self.prim:
+                      self.prim = ant.prox
+                  if aux == self.ult:
+                      self.ult = ant                
+                  self.quant -= 1   
+                  
                 
                 
-            
+        
                 
