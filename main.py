@@ -1,10 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Fri Mar 11 13:33:53 2022
-
-@author: PC
-"""
-
 import ldse
 
 lista = ldse.Ldse()
@@ -14,13 +7,14 @@ if not lista.estahVazia():
 
 lista.inserirInicio('7')
 lista.inserirInicio('7')
-lista.inserirInicio('7')
 lista.inserirInicio('6')
 lista.inserirInicio('5')
 lista.inserirInicio('4')
+lista.inserirInicio('7')
 lista.inserirInicio('3')
 lista.inserirInicio('2')
 lista.inserirInicio('1')
+lista.inserirInicio('7')
 
 print("#####################################")
 print("############### L D S E #############")
@@ -28,7 +22,11 @@ print("############### L D S E #############")
 lista.imprimir()
 
 print("#######################################")
-print(" # Removendo todos os elementos ... ", lista.removerTodas('7'))
+print(" # Removendo todos os elementos ... 7", lista.removerTodas('7'))
+lista.imprimir()
+
+print("#######################################")
+print(" # Inserindo '9' na posição 3... ", lista.inserirPosicao('9', 3))
 lista.imprimir()
 
 print("#####################################")
@@ -57,9 +55,6 @@ lista.imprimir()
 
 
 
-'''print("#######################################")
+print("#######################################")
 print("Somando todos os elementos... ", lista.somarElementos())
-lista.imprimir()'''
-
-
-
+lista.imprimir()
