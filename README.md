@@ -1,2 +1,2 @@
 # LDSE
-Lista Dinâmica Simplesmente Encadeada - Estrutura de dados com Python
+LDSE - Lista Dinâmica Simplesmente Encadeada / Estrutura de dados com Python
